@@ -1,3 +1,8 @@
+//Scott Shuffler
+//2-18-15
+//TestL.java
+//Worked with Devin Sink
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -9,6 +14,8 @@ import java.util.Scanner;
 
 public class TestL
 {
+    //Main for TestL
+    //Opens a file and parses the ints contained within and prints
     public static void main(String args[]) throws FileNotFoundException
     {
         File f = new File(args[0]);

@@ -1,27 +1,28 @@
-
+//Scott Shuffler
+//2-18-15
+//GraphM.java
+//Worked with Devin Sink
 
 public class GraphM {
     public int order;
     int [][] matrix;
     
-    
+    //Create a nxn matrix with no edges
 	public GraphM(int n)
 	{
-		//Creates a graph with n vertices and no edges
-		//(create an n by n two-dimensional,  array of int (or more complex) )
 	    order = n;
 	    matrix = new int[n][n];  
 	}
 	
+	//Return the number of vertices 
 	public int order()
 	{
-		//Returns the number of vertices in the graph
 		return order;
 	}
 	
+	//Returns the number of edges in the graph
 	public int size()
 	{
-		//Returns the number of edges in the graph
 	    int count = 0;
 	    for(int i = 0; i < matrix.length; i++)
 	    {
@@ -33,10 +34,9 @@ public class GraphM {
 		return count / 2;
 	}
 	
+	//Returns wether or not there is an edge between i and j
 	public boolean isEdge(int i, int j)
 	{
-		//Returns whether or not there is an edge between i and j
-		//or you can return an int weight
 		if(matrix[i][j] == 1)
 		{
 		    return true;
@@ -47,11 +47,9 @@ public class GraphM {
 		}
 	}
 	
+	//adds an edge between i and j 
 	public void addEdge(int i, int j)
 	{
-		//adds an edge between i and j (and j and i, if you wish)
-		// you may overload this method to have three parameters,
-		// the third being an edge weight
 	    matrix[i][j] = 1;
 	    matrix[j][i] = 1;
 	}

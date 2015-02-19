@@ -1,3 +1,8 @@
+//Scott Shuffler
+//2-18-15
+//GraphL.java
+//Worked with Devin Sink
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -8,6 +13,7 @@ public class GraphL {
 	public int order;
 	ArrayList<LinkedList<Integer>> list;
 
+	//Creates a graph with numVertices vertices and no edges
 	public GraphL(int numVertices)
 	{
 		order = numVertices;
@@ -16,19 +22,17 @@ public class GraphL {
 		    
 		    list.add(new LinkedList<Integer>());
 		}
-		//Creates a graph with numVertices vertices and no edges
-		//(Create n empty linked lists)
 	}
 	
+	//returns the number of vertices in the graph
 	public int order()
 	{
-		//returns the number of vertices in the graph
 		return order;
 	}
 	
+	//Returns the number of edges in the graph
 	public int size()
 	{
-		//Returns the number of edges in the graph
 		int count = 0;
 		
 		for (int i = 0; i < order;i++)
@@ -39,12 +43,14 @@ public class GraphL {
 	    return count;
 	}
 	
+	//Returns an Iterator to the linked list of neighbors of vertex 
 	public Iterator<Integer> neighbors(int i)
 	{
 	    return list.get(i).iterator();
-		//Returns an Iterator to the linked list of neighbors of vertex 
+		
 	}
 	
+	//Adds an edge between i and j
 	public void addEdge(int i, int j)
 	{
 		list.get(i).add(j);
